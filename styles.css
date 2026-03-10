@@ -287,7 +287,7 @@ nav {
 
 .button-gif {
   position: absolute;
-  bottom: 24px;
+  bottom: 36px;
   left: 20px;
   width: 44px;
   height: auto;
@@ -886,6 +886,7 @@ nav {
     max-width: 320px;
   }
 }
+
 
 
 
