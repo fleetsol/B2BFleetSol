@@ -1,0 +1,885 @@
+/* Museo Sans font faces */
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-200.woff2") format("woff2"),
+    url("../fonts/MuseoSans-200.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-200Italic.woff2") format("woff2"),
+    url("../fonts/MuseoSans-200Italic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-300.woff2") format("woff2"),
+    url("../fonts/MuseoSans-300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-300Italic.woff2") format("woff2"),
+    url("../fonts/MuseoSans-300Italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-400.woff2") format("woff2"),
+    url("../fonts/MuseoSans-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-400Italic.woff2") format("woff2"),
+    url("../fonts/MuseoSans-400Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-500.woff2") format("woff2"),
+    url("../fonts/MuseoSans-500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-500Italic.woff2") format("woff2"),
+    url("../fonts/MuseoSans-500Italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-700.woff2") format("woff2"),
+    url("../fonts/MuseoSans-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-700Italic.woff2") format("woff2"),
+    url("../fonts/MuseoSans-700Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-900.woff2") format("woff2"),
+    url("../fonts/MuseoSans-900.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src:
+    url("../fonts/MuseoSans-900Italic.woff2") format("woff2"),
+    url("../fonts/MuseoSans-900Italic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ──────────────────────────────────────
+   ROOT & GLOBAL
+────────────────────────────────────── */
+
+:root {
+  --museo: "Museo Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --blue-dark: #162b52;
+  --blue-medium: #005eb8;
+  --blue-light: #e6f6ff;
+  --text-dark: #162b52;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--museo);
+  line-height: 1.6;
+  color: #222;
+  background-color: var(--blue-light);
+}
+
+/* ──────────────────────────────────────
+   HEADER & NAV
+────────────────────────────────────── */
+
+header {
+  background: white;
+  border-bottom: 1px solid #c9e0ff;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 82px;
+  width: auto;
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+}
+
+.menu-toggle,
+.menu-label {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--blue-medium);
+}
+
+/* ──────────────────────────────────────
+   HERO
+────────────────────────────────────── */
+
+.hero {
+  background: var(--blue-dark);
+  color: white;
+  text-align: center;
+  padding: 7rem 5% 6rem;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.second-line {
+  white-space: nowrap;
+}
+
+.hero .subtitle {
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* ──────────────────────────────────────
+   CARDS SECTION – simple & reliable
+────────────────────────────────────── */
+
+.cards-section {
+  padding: 3rem 5% 5rem;
+  background: transparent;
+}
+
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 2.5rem;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.28s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  position: relative; /* ← make image the positioning context */
+}
+
+.button-gif {
+  position: absolute;
+  bottom: 40px; /* fixed small distance from image bottom */
+  left: 20px;
+  width: 35px;
+  height: auto;
+  z-index: 2;
+  transition: transform 0.25s ease;
+}
+
+/* Mobile – smaller button, closer to bottom */
+@media (max-width: 980px) {
+  .cards-container {
+    gap: 1.8rem;
+  }
+
+  .button-gif {
+    width: 35px;
+    bottom: 40px;
+    left: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-section {
+    padding: 2rem 5% 4rem;
+  }
+
+  .cards-container {
+    gap: 1.5rem;
+  }
+
+  .button-gif {
+    width: 30px;
+    bottom: 35px; /* very close to image bottom */
+    left: 16px;
+  }
+}
+
+/* ──────────────────────────────────────
+   SHARED CONTENT SECTIONS
+────────────────────────────────────── */
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.section-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-text h3 {
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.section-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  opacity: 0.95;
+}
+
+/* Video */
+.video-placeholder {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  width: 100%;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.92;
+  transition: opacity 0.4s ease;
+}
+
+.video-placeholder:hover .video-player {
+  opacity: 1;
+}
+
+/* GIF (Benefits) */
+.gif-placeholder {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  aspect-ratio: unset;
+}
+
+.gif-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Lists */
+.tick-list {
+  list-style: none;
+  padding-left: 2.2rem;
+  margin-top: 1.8rem;
+}
+
+.tick-list li {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  color: var(--blue-dark);
+}
+
+.tick-list li::before {
+  content: "";
+  position: absolute;
+  left: -2.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("Images/tick.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.long-list {
+  list-style: disc inside;
+  padding-left: 1.8rem;
+  margin-top: 1.8rem;
+}
+
+.long-list li {
+  font-size: 1.15rem;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  color: var(--blue-dark);
+  line-height: 1.5;
+}
+
+/* Section backgrounds & padding */
+.about-video-section {
+  background: var(--blue-dark);
+  color: white;
+  padding: 5rem 5% 6rem;
+}
+
+.car-leasing-section {
+  background: transparent;
+  padding: 5rem 5% 6rem;
+  color: var(--text-dark);
+}
+
+.hes-section {
+  background: #e1e5ff;
+  padding: 5rem 5% 6rem;
+  color: var(--text-dark);
+}
+
+.benefits-section {
+  background: transparent;
+  padding: 5rem 5% 6rem;
+  color: var(--text-dark);
+}
+
+/* ──────────────────────────────────────
+   RESPONSIVE – SHARED SECTIONS
+────────────────────────────────────── */
+
+@media (max-width: 980px) {
+  .section-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  .section-text {
+    order: 1;
+    text-align: center;
+  }
+
+  .video-placeholder,
+  .gif-placeholder {
+    order: 2;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .section-text ol,
+  .tick-list,
+  .long-list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .about-video-section,
+  .car-leasing-section,
+  .hes-section,
+  .benefits-section {
+    padding: 4rem 6% 5rem;
+  }
+
+  .benefits-section .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  .benefits-section .section-text {
+    margin-bottom: 0.8rem;
+    width: 100%;
+  }
+
+  .benefits-section .gif-placeholder {
+    width: 100%;
+    max-width: 100%;
+    margin: 0.5rem auto 1.5rem;
+    aspect-ratio: unset !important;
+    padding: 0;
+  }
+
+  .benefits-section .gif-placeholder img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 6% 4rem;
+  }
+
+  .second-line {
+    white-space: normal;
+  }
+
+  .hero h1 {
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo img {
+    height: 52px;
+  }
+
+  .hero {
+    padding: 4.5rem 5% 3.5rem;
+  }
+
+  .section-text h2 {
+    font-size: 2rem;
+  }
+
+  .section-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-video-section,
+  .car-leasing-section,
+  .hes-section,
+  .benefits-section {
+    padding: 3rem 5% 4rem;
+  }
+
+  .benefits-section {
+    padding: 2.5rem 5% 3.5rem;
+  }
+
+  .tick-list li,
+  .long-list li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-label {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--blue-medium);
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1.5rem 6%;
+    border-bottom: 1px solid #d0e0f5;
+    gap: 1.4rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+/* ──────────────────────────────────────
+   DOWNLOADS SECTION
+────────────────────────────────────── */
+
+.downloads-section {
+  background: var(--blue-dark);
+  color: white;
+  padding: 5rem 5% 6rem;
+  text-align: left;
+}
+
+.downloads-section .section-text {
+  max-width: 800px;
+}
+
+.downloads-section .section-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.downloads-section .section-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.download-item {
+  display: block;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.download-item:hover {
+  transform: translateY(-8px);
+  opacity: 0.92;
+}
+
+.download-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.right-aligned {
+  justify-self: end;
+  text-align: right;
+}
+
+.left-aligned {
+  justify-self: start;
+  text-align: left;
+}
+
+@media (max-width: 980px) {
+  .downloads-section .section-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .downloads-section .section-text {
+    order: 1;
+    text-align: center;
+  }
+
+  .downloads-grid {
+    order: 2;
+  }
+
+  .downloads-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    justify-items: center;
+  }
+
+  .download-item {
+    justify-self: center !important;
+    text-align: center !important;
+  }
+
+  .downloads-section {
+    padding: 4rem 6% 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .downloads-section {
+    padding: 3rem 5% 4rem;
+  }
+
+  .downloads-section .section-text h2 {
+    font-size: 2rem;
+  }
+
+  .downloads-section .section-text p {
+    font-size: 1.05rem;
+  }
+}
+
+/* ──────────────────────────────────────
+   CONTACT SECTION
+────────────────────────────────────── */
+
+.contact-section {
+  background: transparent;
+  padding: 5rem 5% 6rem;
+  color: var(--text-dark);
+}
+
+.contact-section .section-container {
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left column - text blocks */
+.contact-left {
+  text-align: left;
+}
+
+.contact-block {
+  margin-bottom: 2.2rem;
+}
+
+.contact-block:last-child {
+  margin-bottom: 0;
+}
+
+.contact-block strong {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.contact-block span {
+  display: block;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: #222;
+}
+
+.contact-block a {
+  color: var(--blue-medium);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-block a:hover {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+
+.contact-block .social-icon {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0.4rem 0 0 0;
+  transition: transform 0.25s ease;
+}
+
+.contact-block .social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Right column - heading + subtitle + GIF */
+.contact-right {
+  text-align: left;
+}
+
+.contact-right h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blue-dark);
+}
+
+.contact-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.plane-gif {
+  width: 400px;
+  height: auto;
+  margin: 1.5rem 0 0 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+}
+
+.plane-gif img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile adjustments */
+@media (max-width: 980px) {
+  .contact-section .section-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .contact-left,
+  .contact-right {
+    text-align: center !important;
+  }
+
+  .contact-right h2,
+  .contact-subtitle {
+    text-align: center;
+  }
+
+  .plane-gif {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 2rem auto 0;
+  }
+
+  .plane-gif img {
+    height: auto;
+  }
+
+  .social-icon {
+    margin: 1rem auto 0;
+  }
+
+  .contact-section {
+    padding: 4rem 6% 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 3rem 5% 4rem;
+  }
+
+  .contact-right h2 {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle,
+  .contact-left p {
+    font-size: 1.05rem;
+  }
+
+  .plane-gif {
+    max-width: 320px;
+  }
+}
